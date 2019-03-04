@@ -31,7 +31,7 @@ namespace WebParser.Controllers
         {
             if (ModelState.IsValid)
             {
-                string pageContent = _pageProvider.GetPageContent("http://wp.pl");
+                string pageContent = _pageProvider.GetPageContent(model.Url);
 
                 return View("Keywords", new KeywordsViewModel(_keywordsFinder.FindKeywords(pageContent)));
             }
