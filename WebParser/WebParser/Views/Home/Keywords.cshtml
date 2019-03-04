@@ -1,0 +1,21 @@
+﻿@model  KeywordsViewModel;
+@{
+    ViewData["Title"] = "Keywords";
+}
+<div style="margin-top: 80px;">
+    <h2>Keywords</h2>
+
+    <table>
+        <tr>
+            <th>Keyword</th>
+            <th>Count</th>
+        </tr>
+        @foreach (var keyword in Model.Keywords)
+        {
+            <tr>
+                <td>@keyword.Key</td>
+                <td>@keyword.Value</td>
+            </tr>
+        }
+    </table>
+</div>
