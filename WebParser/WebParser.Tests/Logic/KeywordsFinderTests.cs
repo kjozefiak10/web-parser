@@ -67,7 +67,7 @@ namespace WebParser.Tests.Logic
         {
             IHtmlWebWrapper htmlWeb = Substitute.For<IHtmlWebWrapper>();
             htmlWeb.SelectNode(Arg.Any<string>(), Arg.Any<string>()).Returns("keywrod keyword1 keyword2 keyword keyword2");
-            htmlWeb.SelectNodeAttribute(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>()).Returns("keyword1, keyword2");
+            htmlWeb.SelectNodeAttribute(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<string>()).Returns("keyword1, keyword2, keyword1");
             KeywordsFinder keyworsdFinder = new KeywordsFinder(htmlWeb);
 
 
